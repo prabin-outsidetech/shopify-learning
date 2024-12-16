@@ -1,0 +1,337 @@
+.#{$global} {
+  &-modal {
+    &--nutrition {
+      .modal {
+        &-dialog {
+          --bs-modal-width: 43.6rem;
+        }
+
+        &-header {
+          .btn-ring {
+            width: 4.8rem;
+            height: 4.8rem;
+          }
+        }
+
+        &-body {
+          &__header {
+            border-top: 1px solid $stone-600;
+          }
+
+          &__image {
+            max-width: 85%;
+
+            @include media-breakpoint-up(md) {
+              max-width: 74.5%;
+            }
+
+            img:not(.unset-ratio) {
+              aspect-ratio: 274 / 291;
+            }
+          }
+
+          .gmo_image {
+            max-width: 23%;
+          }
+        }
+      }
+    }
+
+    &--leadspace-video {
+      .modal {
+        &-dialog {
+          max-width: 100%;
+          margin: 0;
+          height: 100%;
+        }
+
+        &-content {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          pointer-events: auto;
+          background-clip: padding-box;
+          border-radius: .3rem;
+          outline: 0;
+          background-color: transparent;
+          padding: 0;
+          height: 100%;
+          margin: 0 auto;
+          border: 0;
+
+          @include media-breakpoint-up(md) {
+            max-width: 83%;
+          }
+        }
+
+        &-header {
+          border: 0;
+          margin: 0;
+          padding: 0;
+          position: fixed;
+          right: 2.4rem;
+          top: 0;
+          z-index: 3;
+          opacity: 0;
+          transition: 0.7s ease-in-out all;
+
+          .btn-ring {
+            padding: 0.6rem;
+
+            svg {
+              width: 1.6rem;
+              height: 1.6rem;
+
+              @include media-breakpoint-up(md) {
+                width: 2.4rem;
+                height: 2.4rem;
+              }
+            }
+          }
+        }
+
+        &-body {
+          display: flex;
+          align-items: center;
+          z-index: 2;
+
+          @include media-breakpoint-up(md) {
+            background-color: $secondary;
+          }
+
+          iframe {
+            width: auto;
+            height: auto;
+            border: 0;
+            min-height: 100%;
+            min-width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      &.show {
+        .modal {
+          &-header {
+            opacity: 1;
+            top: 2.4rem;
+          }
+        }
+      }
+    }
+
+    &--team {
+      .modal {
+        &-dialog {
+          --bs-modal-width: 52rem;
+        }
+
+        &-body {
+
+          .btn-ring {
+            width: 4rem;
+            height: 4rem;
+          }
+
+          .button-wrapper {
+            top: 2.4rem;
+            right: 2.4rem;
+          }
+
+          &__image {
+            background-color: $stone-600;
+            img {
+              aspect-ratio: 358 / 263;
+
+              @include media-breakpoint-up(md) {
+                aspect-ratio: 520 / 400;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--inclusion {
+      .modal {
+        &-dialog {
+          --bs-modal-width: 64rem;
+          --bs-modal-margin: 1.6rem;
+          margin-left: var(--bs-modal-margin);
+          margin-right: var(--bs-modal-margin);
+
+          @media screen and (min-width: 672px) {
+            --bs-modal-margin: 8rem;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        &-content {
+          overflow: clip;
+
+          .btn-ring {
+            width: 4rem;
+            height: 4rem;
+          }
+
+          .button-wrapper {
+            top: 0;
+
+            .btn {
+              top: 2.4rem;
+              right: 2.4rem;
+            }
+          }
+        }
+
+
+        &-body {
+          &__image {
+            background-color: $stone-600;
+            img {
+              aspect-ratio: 358 / 263;
+
+              @include media-breakpoint-up(md) {
+                aspect-ratio: 640 / 325;
+              }
+            }
+          }
+
+          &__title {
+            @include media-breakpoint-up(md) {
+              max-width: 33.4rem;
+            }
+          }
+
+          &__description {
+            a {
+              color: $primary;
+            }
+
+            ul, ol {
+              li {
+                &::marker {
+                  color: $secondary;
+                }
+              }
+            }
+
+            ul {
+              li {
+                list-style-type: disc;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--work-science {
+      .modal {
+        &-dialog {
+          --bs-modal-width: 43.6rem;
+        }
+
+        &-header {
+          .btn-ring {
+            width: 4.8rem;
+            height: 4.8rem;
+          }
+        }
+
+        &-body {
+          &__image {
+            width: 100%;
+            aspect-ratio: 370/198;
+            border-radius: 0.8rem;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+
+    &--experts {
+      .modal {
+        &-dialog {
+          --bs-modal-width: 88.8rem;
+          --bs-modal-margin: 1.6rem;
+          margin-left: var(--bs-modal-margin);
+          margin-right: var(--bs-modal-margin);
+
+          @media screen and (min-width: 920px) {
+            --bs-modal-margin: 8rem;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+
+        &-content {
+          overflow: clip;
+
+          .btn-ring {
+            width: 4rem;
+            height: 4rem;
+          }
+
+          .button-wrapper {
+            top: 0;
+
+            .btn {
+              top: 2.4rem;
+              right: 2.4rem;
+            }
+          }
+        }
+
+        &-body {
+          &__image {
+            width: 100%;
+            aspect-ratio: 310 / 300;
+            box-shadow: 0px 4px 16px 0px rgba(33, 33, 33, 0.05);
+
+            @include media-breakpoint-up(md) {
+              aspect-ratio: 348 / 336;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          &__description {
+            a {
+              text-decoration: underline;
+              font-weight: $font-weight-medium;
+            }
+
+            ul, ol {
+              li {
+                &::marker {
+                  color: $gray-900;
+                }
+              }
+            }
+
+            ul {
+              li {
+                list-style-type: disc;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  display: block !important;
+  background-color: $dark;
+}

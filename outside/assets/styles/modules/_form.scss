@@ -1,0 +1,217 @@
+.c-input {
+  &__with-search {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 1px;
+      width: 74px;
+      height: calc(100% - 2px);
+      top: 1px;
+      border-radius: 8px;
+      background: linear-gradient(266deg, rgb(247, 249, 238) 50%, rgba(247, 249, 238, 0) 100%);
+      pointer-events: none;
+    }
+
+    .btn-search {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 1.2rem 0.8rem 1.2rem 1.6rem;
+    }
+
+    .btn-clear {
+      padding: 0;
+      position: absolute;
+      right: 1.8rem;
+      rotate: 45deg;
+      opacity: 0;
+      pointer-events: none;
+      top: calc(50% - 0.4rem);
+      transform: translateY(-50%);
+    }
+  }
+
+  &__text {
+    @extend .text-regular--d;
+    border-radius: 0.8rem;
+    border: 0.1rem solid $stone-900;
+    padding: 1.26rem 3rem 1.26rem 4.8rem;
+    background-color: transparent;
+
+    &::placeholder {
+      color: $stone-900;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &--fw {
+      width: 100%;
+    }
+  }
+}
+
+.switch-pack {
+  display: inline-block;
+  padding: 0.4rem;
+  border-radius: 0.8rem;
+  position: relative;
+  overflow: hidden;
+  background-color: $stone-600;
+
+  input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 0.1rem;
+    width: 0.1rem;
+    border: 0;
+    overflow: hidden;
+
+    &:checked {
+      pointer-events: none;
+    }
+
+    &:checked+label {
+      color: $stone-500;
+      pointer-events: none;
+
+      span {
+        display: inline;
+        margin-left: 0.2rem;
+      }
+    }
+  }
+
+  label {
+    text-align: center;
+    padding: 1.2rem 1.6rem;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+
+    span {
+      display: none;
+    }
+  }
+
+  .lava-lamp {
+    display: block !important;
+    position: absolute;
+    top: 0.4rem;
+    background-color: $secondary;
+    box-shadow: 0px 0.8rem 1.6rem 0px rgba(33, 33, 33, 0.05);
+    border-radius: 0.6rem;
+    transition: width 0.2s linear, left 0.2s linear, transform 0.2s linear;
+    height: 100%;
+  }
+}
+
+
+.selectbox {
+  &_wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &_input {
+    padding: 0.9602rem 1.2rem;
+    border-radius: 0.8rem;
+    z-index: 3;
+    position: relative;
+    background-color: $stone-600;
+    overflow: hidden;
+    transition: 0.2s ease-in-out all;
+
+    &_label {
+      font-weight: bold;
+    }
+
+    &_arrow {
+      padding: 0.275rem 0.7rem;
+
+      svg {
+        transition: 0.2s ease-in-out transform;
+      }
+    }
+  }
+
+  &_list {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 80px;
+    z-index: 2;
+    background: $stone-600;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    border-top: 1px solid $secondary;
+
+    &_item {
+      padding: 1.1rem 1.6rem;
+      border-bottom: 1px solid $secondary;
+      margin-bottom: 0;
+
+      &:last-child {
+        border-bottom-width: 0;
+      }
+
+      &:hover {
+        background-color: $stone-500;
+        color: $secondary;
+      }
+
+      &.disabled {
+        opacity: 0.5;
+
+        &:hover {
+          background-color: $stone-500;
+        }
+      }
+    }
+  }
+
+  &_open {
+    .selectbox {
+      &_list {
+        display: block;
+      }
+
+      &_input {
+        &_arrow {
+          svg {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &_direction_bottom {
+    .selectbox {
+      &_list {
+        top: inherit;
+        bottom: 100%;
+      }
+    }
+  }
+
+  &_open {
+    .selectbox {
+      &_input {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.link { 
+  &-transition {
+    @include transition(all 0.3s ease !important);
+    svg {
+      path {
+        @include transition(all 0.3s ease !important);
+      }
+    }
+  }
+  &-stone-500 {
+    &:hover {
+      color: $primary !important;
+
+      svg {
+        path {
+          fill: $primary !important;
+        }
+      }
+    }
+
+    &:has(span) {
+      &:hover {
+        color: $sky-blue !important;
+
+        svg {
+          path {
+            fill: $sky-blue !important;
+          }
+        }
+      }
+    }
+
+    &--skyblue:hover {
+      color: $sky-blue !important;
+    }
+  }
+
+  &-stone-900 {
+    &:hover {
+      color: $primary !important;
+    }
+
+    &--skyblue {
+      &:hover {
+        color: $sky-blue !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.c {
+  &-picture {
+    display: block;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.c {
+  &-video {
+    display: block;
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

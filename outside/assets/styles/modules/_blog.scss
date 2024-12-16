@@ -1,0 +1,106 @@
+.main-blog {
+
+  .c-blog {
+    &-articles {
+
+      @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .c-lab-article {
+        &__picture {
+          aspect-ratio: 431 / 284;
+        }
+
+        .c-lab-article__picture>img {
+          transition: 1.2s transform var(--transition-ease);
+          transition-delay: 50ms;
+        }
+
+        .c-lab-article__title>a {
+          transition: 1.2s color var(--transition-ease) !important;
+        }
+
+        &:hover {
+          .c-lab-article__picture>img {
+            transform: scale(1.05);
+          }
+        }
+        &:hover:not(:has(.c-lab-article__button-wrapper)) {
+          .c-lab-article__title>a {
+            color: var(--bs-orange);
+          }
+        }
+
+        &.c-lab-article--blue {
+          &:hover:not(:has(.c-lab-article__button-wrapper)) {
+            .c-lab-article__title>a {
+              color: var(--bs-sky-blue);
+            }
+          }
+        }
+      }
+
+      &__article {
+        align-items: start;
+
+        .c-lab-article {
+          &__cover {
+            color: $stone-500;
+            height: 100%;
+
+            .c-lab-article {
+              &__picture {
+                width: 100%;
+                height: 100%;
+
+                &::before {
+                  content: "";
+                  background: linear-gradient(180deg, rgba(33, 33, 33, 0.00) 0%, #212121 100%);
+                  position: absolute;
+                  inset: 0;
+                  width: 100%;
+                  height: 100%;
+                  z-index: 1;
+                }
+              }
+
+              &__pill-wrapper {
+                display: none !important;
+              }
+
+              &__date {
+                display: none !important;
+              }
+
+              &__title {
+                margin-top: 0 !important;
+              }
+            }
+          }
+
+          &:not(.c-lab-article__cover):has(.c-lab-article__pill-wrapper) {
+
+            .c-lab-article__title .stretched-link::after {
+              // display: none;
+            }
+          }
+
+          &:not(:has(.c-lab-article__pill-wrapper)) {
+
+            .c-lab-article {
+
+              &__title {
+                margin-top: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

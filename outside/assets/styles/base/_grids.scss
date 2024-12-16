@@ -1,0 +1,25 @@
+.container {
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+
+  }
+
+  @include media-breakpoint-up(md) {
+    .row {
+      margin-right: -1.2rem;
+      margin-left: -1.2rem;
+
+      >.col,
+      >[class*='col-'] {
+        padding-right: 1.2rem;
+        padding-left: 1.2rem;
+      }
+    }
+
+    .col-md-4h {
+      width: 37.5%;
+    }
+  }
+}

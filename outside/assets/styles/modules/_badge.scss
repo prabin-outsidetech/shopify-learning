@@ -1,0 +1,16 @@
+.pill-badge {
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &-primary {
+    background-color: $primary;
+  }
+  &-blue {
+    background-color: $sky-blue;
+  }
+}

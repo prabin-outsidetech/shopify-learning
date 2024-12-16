@@ -1,0 +1,242 @@
+.display-large,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h4--d,
+.h5,
+.h5--d,
+.h6,
+.pill,
+.switch-pack label {
+  @extend %heading;
+}
+
+.display-large {
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  font-size: 4.4rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 6.4rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 8.8rem;
+  }
+}
+
+h1,
+.h1,
+.display-1 {
+  font-size: 4rem;
+  line-height: 4rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 6.4rem;
+    line-height: 6.4rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2.8rem;
+  line-height: 3.08rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 4rem;
+    line-height: 4.4rem;
+  }
+}
+
+h3,
+.h3,
+.h3--all > * {
+  font-size: 2rem;
+  line-height: 2.2rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 3.2rem;
+    line-height: 3.52rem;
+  }
+}
+
+h4,
+.h4,
+.accordion-button,
+.text-medium--narrow strong  {
+  font-size: 1.8rem;
+  line-height: 1.98rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.4rem;
+    line-height: 2.64rem;
+  }
+
+  &--d {
+    font-size: 2.4rem;
+    line-height: 2.64rem;
+  }
+}
+
+h5,
+.h5,
+.body-1 {
+  font-size: 1.4rem;
+  line-height: 1.54rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.6rem;
+    line-height: 1.76rem;
+  }
+
+  &--d {
+    font-size: 1.6rem;
+    line-height: 1.76rem;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 1.3rem;
+  line-height: 1.43rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.4rem;
+    line-height: 1.54rem;
+  }
+
+}
+
+.h6-m {
+  font-size: 1.3rem;
+  line-height: 1.43rem;
+}
+
+.h6-d,
+.switch-pack label,
+.zb-main-product .skio-group-topline .skio-price {
+  font-size: 1.4rem;
+  line-height: 1.54rem;
+}
+
+.pill,
+.button,
+.btn {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.btn-large {
+  @include media-breakpoint-up(lg) {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+  &--all {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+}
+
+.text {
+
+  &-large,
+  &-large--all>* {
+    font-size: 2rem;
+    line-height: 2.6rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2.4rem;
+      line-height: 3.12rem;
+    }
+  }
+
+  &-regular {
+
+    &--d,
+    &-all--d>* {
+      font-size: 1.6rem;
+      line-height: 2.08rem;
+    }
+
+    &--l {
+      font-size: 1.6rem;
+      line-height: 2.08rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.8rem;
+        line-height: 2.52rem;
+      }
+    }
+  }
+
+  &-medium,
+  &-medium--all>* {
+    font-size: 1.6rem;
+    line-height: 2.08rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+      line-height: 2.6rem;
+    }
+  }
+
+  &-small,
+  &-small--all>* {
+    font-size: 1.3rem;
+    line-height: 1.69rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.4rem;
+      line-height: 1.82rem;
+    }
+  }
+
+  &-small--d--all>* {
+
+    @include media-breakpoint-up(lg) {
+      font-size: 1.4rem;
+      line-height: 1.82rem;
+    }
+  }
+
+  &-xsmall,
+  &-xsmall--all>* {
+    font-size: 1.2rem;
+    line-height: 1.56rem;
+  }
+}
+
+body,
+.text-regular,
+ .text-regular--all>* {
+  font-size: 1.4rem;
+  line-height: 1.82rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.6rem;
+    line-height: 2.08rem;
+  }
+}
+
+.pill-badge {
+  font-size: 1.2rem;
+  line-height: 1.32rem;
+  font-weight: $font-weight-medium;
+}
+
+.button,
+.btn {
+  font-weight: $font-weight-medium;
+}
+
+a {
+  text-decoration: none;
+  @extend .transition-fast;
+}

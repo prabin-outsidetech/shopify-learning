@@ -1,0 +1,47 @@
+.announcement-bar-section {
+  opacity: 1;
+  transition: 0.3s ease-in-out all;
+  will-change: transform;
+
+  .announcement-bar {
+    will-change: transform;
+    transition: 0.3s ease-in-out transform;
+  }
+
+  &.js-close-announcement-bar {
+    height: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-100%);
+
+    .announcement-bar {
+      transform: translateY(-100%);
+    }
+  }
+
+  .announcement-bar__close {
+    position: absolute;
+    right: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 0;
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  .utility-bar {
+    min-height: 40px;
+  }
+
+  &:has(.utility-bar--sticky) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 8;
+    // padding-bottom: var(--announcement-bar-height);
+  }
+}

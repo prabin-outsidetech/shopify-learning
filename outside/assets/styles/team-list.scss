@@ -1,0 +1,100 @@
+@import './common';
+
+.m-team-list {
+  &--corner-radius {
+    .m-team-list-section {
+      border-top-right-radius: 4rem;
+      border-top-left-radius: 4rem;
+      overflow: hidden;
+    }
+  }
+
+  &__card__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: .8rem;
+    row-gap: 2.4rem;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 1.6rem;
+      row-gap: 4rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      column-gap: 2.4rem;
+      row-gap: 8rem;
+    }
+  }
+
+  .m-team-card-circle {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+
+    .m-team-card__title {
+      transition: color 0.3s ease-in-out !important;
+    }
+
+    &:hover {
+      .c-picture {
+        outline-offset: 0.4rem;
+        outline-color: $primary;
+      }
+
+      .m-team-card__title {
+        color: $primary;
+      }
+    }
+
+    .c-picture {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: $stone-500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+
+      outline-width: 0.2rem !important;
+      outline-style: solid !important;
+      outline-offset: 0;
+      outline-color: transparent;
+      transition: all 0.2s ease-in-out !important;
+    }
+  }
+}
+
+/* transition when filter */
+.js-team-list-wrapper .m-team-card {
+  opacity: 0;
+  // transition: opacity 0.3s ease;
+  height: 0;
+  width: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.js-team-list-wrapper .m-team-card.active {
+  opacity: 1;
+  width: inherit;
+  height: inherit;
+  position: relative;
+  // transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+#modalMemberImage[data-image-position="object-position-top"] {
+  object-position: top;
+}
+
+#modalMemberImage[data-image-position="object-position-center"] {
+  object-position: center;
+}
+
+#modalMemberImage[data-image-position="object-position-bottom"] {
+  object-position: bottom;
+}

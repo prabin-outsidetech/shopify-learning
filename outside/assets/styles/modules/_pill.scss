@@ -1,0 +1,35 @@
+.pill {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid $secondary;
+  border-radius: 9.9rem;
+  display: inline-flex;
+  margin: 0;
+  height: 2.4rem;
+  $self: &;
+
+  &-stone-500 {
+    border-color: $stone-500;
+  }
+
+  &#{$self}--primary {
+    border-color: $primary;
+    background-color: $primary;
+    color: $secondary;
+  }
+
+  &#{$self}--stone-900 {
+    border-color: $stone-900;
+    background-color: $stone-900;
+    color: $secondary;
+  }
+}
+
+.team-pill {
+  @extend .pill;
+  border: 1px solid transparent;
+  background-color: transparent;
+
+  &--active {
+    border-color: $secondary;
+  }
+}

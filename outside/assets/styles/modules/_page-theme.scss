@@ -1,0 +1,207 @@
+.page--sugar-to-fiber {
+  &.template--product {
+
+    .mobile-filters-modal .mobile-filters-container .mobile-single-filter .mobile-filter-radio-buttons .mobile-filter-radio-button .radio-selected-star-color,
+    .yotpo .yotpo-bottomline .yotpo-icon-star,
+    .yotpo .yotpo-bottomline .yotpo-icon-half-star,
+    .yotpo .yotpo-bottomline .yotpo-icon-empty-star,
+    .yotpo .yotpo-review .yotpo-header .yotpo-review-stars .yotpo-icon,
+    .filters-dropdown .yotpo-dropdown-button .selected span,
+    .filters-dropdown .yotpo-dropdown .list-category .selected-stars {
+      color: $sky-blue;
+    }
+
+    .yotpo-drop-down-layout .yotpo-dropdown .list-category .selected-item {
+      color: $sky-blue !important;
+    }
+
+    .yotpo .yotpo-star-distribution-wrapper .yotpo-distribution-rows .yotpo-distribution-row .yotpo-star-distribution-bar-score,
+    .yotpo .yotpo-modal-dialog .mobile-filters-footer-btn,
+    .section-newsletter .klaviyo-form button {
+      background-color: $sky-blue !important;
+    }
+
+    .zb-main-product {
+      .zb-product {
+        .skio-group-container {
+
+          &.skio-group-container--selected {
+            .skio-group-label {
+              .skio-radio__container {
+                svg {
+                  circle {
+                    fill: $sky-blue;
+                    stroke: $sky-blue;
+
+                    &.skio-radio {
+                      fill: $secondary;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &:hover {
+            .skio-radio__container {
+              svg {
+                circle {
+                  fill: $sky-blue;
+                  stroke: $sky-blue;
+
+                  &.skio-radio {
+                    fill: $secondary;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .product__info-container {
+          .product__description {
+            a {
+              color: $sky-blue !important;
+            }
+
+            ul>li::marker,
+            ol>li::marker {
+              color: $sky-blue;
+            }
+          }
+        }
+      }
+    }
+
+    .m-featured-review {
+      &__heading {
+        &>span {
+          color: $sky-blue;
+        }
+      }
+
+      .c-featured-review {
+        &-card {
+          .start-full {
+            &>svg {
+              color: $sky-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page--how-it-works-sugar-fiber {
+  .mobile-filters-modal .mobile-filters-container .mobile-single-filter .mobile-filter-radio-buttons .mobile-filter-radio-button .radio-selected-star-color,
+  .yotpo .yotpo-bottomline .yotpo-icon-star,
+  .yotpo .yotpo-bottomline .yotpo-icon-half-star,
+  .yotpo .yotpo-bottomline .yotpo-icon-empty-star,
+  .yotpo .yotpo-review .yotpo-header .yotpo-review-stars .yotpo-icon,
+  .filters-dropdown .yotpo-dropdown-button .selected span,
+  .filters-dropdown .yotpo-dropdown .list-category .selected-stars {
+    color: $sky-blue;
+  }
+
+  .yotpo-drop-down-layout .yotpo-dropdown .list-category .selected-item {
+    color: $sky-blue !important;
+  }
+
+  .yotpo .yotpo-star-distribution-wrapper .yotpo-distribution-rows .yotpo-distribution-row .yotpo-star-distribution-bar-score,
+  .yotpo .yotpo-modal-dialog .mobile-filters-footer-btn,
+  .section-newsletter .klaviyo-form button {
+    background-color: $sky-blue !important;
+  }
+
+  .zb-main-product {
+    .zb-product {
+      .skio-group-container {
+
+        &.skio-group-container--selected {
+          .skio-group-label {
+            .skio-radio__container {
+              svg {
+                circle {
+                  fill: $sky-blue;
+                  stroke: $sky-blue;
+
+                  &.skio-radio {
+                    fill: $secondary;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .skio-radio__container {
+            svg {
+              circle {
+                fill: $sky-blue;
+                stroke: $sky-blue;
+
+                &.skio-radio {
+                  fill: $secondary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .product__info-container {
+        .product__description {
+          a {
+            color: $sky-blue !important;
+          }
+
+          ul>li::marker,
+          ol>li::marker {
+            color: $sky-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .zb-modal--leadspace-video {
+    .modal-header .btn-ring {
+      background-color: $sky-blue !important;
+    }
+  }
+
+  .m-featured-review {
+    &__heading {
+      &>span {
+        color: $sky-blue;
+      }
+    }
+
+    .c-featured-review {
+      &-card {
+        .start-full {
+          &>svg {
+            color: $sky-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.page--careers {
+  .m-section-science {
+    .zb-headline-title {
+      @include media-breakpoint-up(md) {
+        display: block;
+        max-width: 30rem;
+      }
+    }
+  }
+}
+
+.template--article-blue .btn-cart .pill-badge.pill-badge-primary {
+  background-color: $sky-blue !important;
+}

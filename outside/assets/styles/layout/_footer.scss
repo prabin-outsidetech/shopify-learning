@@ -1,0 +1,92 @@
+.#{$global} {
+  &-footer {
+    ul {
+      li {
+        padding-left: 0;
+
+        &:not(:last-child) {
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+
+    &__logo {
+      @include media-breakpoint-down(lg) {
+        max-width: 13.5rem;
+      }
+    }
+
+    &__left {
+      &-bg {
+        margin-left: -3.2rem;
+        margin-right: -3.2rem;
+        margin-top: -45%;
+
+        @include media-breakpoint-up(md) {
+          margin-right: 0;
+          margin-top: 0;
+          margin-left: -8vw;
+        }
+
+        @include media-breakpoint-up(xl) {
+          margin-left: -18vw;
+        }
+
+        @media(min-width:1600px) {
+          margin-left: -12vw;
+        }
+
+        @include media-breakpoint-up(xxl) {
+          margin-left: -4vw;
+        }
+
+        &>div,
+        svg {
+
+          @include media-breakpoint-up(lg) {
+            max-width: 60rem;
+          }
+
+          @include media-breakpoint-up(xl) {
+            max-width: 76.2rem;
+          }
+
+          @include media-breakpoint-up(xxl) {
+            max-width: 80rem;
+          }
+        }
+
+        svg {
+          width: 100%;
+          height: auto;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &__address {
+
+      p {
+        line-height: 2.8rem;
+      }
+    }
+
+    &__social {
+      svg {
+        path {
+          fill: $stone-900;
+        }
+      }
+    }
+
+    &__bottom {
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

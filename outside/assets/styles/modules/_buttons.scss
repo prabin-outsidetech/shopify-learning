@@ -1,0 +1,286 @@
+.btn {
+  --bs-btn-padding-x: 1.6rem;
+  --bs-btn-padding-y: 1.2rem;
+  border-radius: 99px;
+  color: $secondary !important;
+  border: 0;
+  box-shadow: none !important;
+
+  &.text-stone-500 {
+    color: $stone-500 !important;
+  }
+
+  &-ring {
+    outline-width: 0.1rem !important;
+    outline-style: solid !important;
+    outline-offset: 0;
+    outline-color: transparent;
+
+    &:hover, &:focus, &:active {
+      outline-offset: 0.4rem;
+      outline-color: $secondary;
+    }
+  }
+
+  &:hover, &:focus, &:active {
+    color: $secondary !important;
+  }
+
+  &-primary {
+    transition: all 0.2s ease-in-out !important;
+
+    &:hover, &:focus, &:active {
+      outline-color: $secondary;
+      background-color: $primary !important;
+    }
+
+    &--dark {
+      &:hover, &:focus, &:active {
+        outline-color: $primary;
+      }
+    }
+  }
+
+  &-large {
+    @include media-breakpoint-up(md) {
+      --bs-btn-padding-x: 2.25rem;
+      --bs-btn-padding-y: 1.6rem;
+    }
+  }
+
+  &-secondary {
+    &--dark {
+      transition: all 0.2s ease-in-out !important;
+      box-shadow: inset 0 0 0 1px $stone-900 !important;
+      background-color: transparent;
+      color: $secondary !important;
+
+      &:hover, &:focus, &:active {
+        outline-offset: 0.4rem;
+        outline-color: $stone-900;
+        background-color: $stone-900 !important;
+      }
+    }
+
+    &--light {
+      color: $stone-500 !important;
+      transition: all 0.2s ease-in-out !important;
+      box-shadow: inset 0 0 0 1px $stone-900 !important;
+      background-color: transparent;
+
+      &:hover, &:focus, &:active {
+        outline-offset: 0.4rem;
+        outline-color: $stone-900;
+        background-color: $stone-900 !important;
+      }
+    }
+
+    &--stone-600 {
+      transition: all 0.2s ease-in-out !important;
+      box-shadow: inset 0 0 0 1px $stone-600 !important;
+      background-color: transparent;
+      color: $secondary !important;
+
+      &:hover, &:focus, &:active {
+        outline-offset: 0.4rem;
+        outline-color: $stone-600;
+        background-color: $stone-600 !important;
+      }
+
+      &-light {
+        color: $stone-600 !important;
+        
+        &:hover, &:focus, &:active {
+          color: $secondary !important;
+        }
+      }
+    }
+
+  }
+
+  &-blue {
+    background-color: $sky-blue;
+    transition: all 0.2s ease-in-out !important;
+
+    &:hover, &:focus, &:active {
+      outline-offset: 0.4rem;
+      outline-color: $secondary;
+      background-color: $sky-blue !important;
+
+      &:before {
+        outline-color: $secondary;
+      }
+    }
+  }
+
+  &-circle {
+    --bs-btn-padding-x: 0.7rem;
+    --bs-btn-padding-y: 0.7rem;
+    border: 0.1rem solid transparent;
+    transition: all 0.3s ease-in-out;
+
+    &--no-border {
+      border: 0.1rem solid transparent !important;
+    }
+
+    &:hover, &:focus, &:active {
+      border: 0.1rem solid $stone-900;
+    }
+
+    &--bordered {
+      border: 0.1rem solid $stone-900;
+    }
+
+    &--customer {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &--default {
+      border: 0.1rem solid transparent !important;
+      background-color: $primary !important;
+
+      &:hover, &:focus, &:active {
+        border: 0.1rem solid transparent !important;
+        background-color: $primary !important;
+      }
+
+      &--md-up {
+        border: 0.1rem solid transparent !important;
+        background-color: $primary !important;
+
+        @include media-breakpoint-up(md) {
+          border: 0.1rem solid $stone-900 !important;
+          background-color: transparent !important;
+
+          &:hover, &:focus, &:active {
+            border: 0.1rem solid $stone-900 !important;
+            background-color: $primary !important;
+          }
+        }
+
+        &-blue{
+          border: 0.1rem solid transparent !important;
+          background-color: $sky-blue !important;
+
+          @include media-breakpoint-up(md) {
+            border: 0.1rem solid $stone-900 !important;
+            background-color: transparent !important;
+
+            &:hover, &:focus, &:active {
+              border: 0.1rem solid $stone-900 !important;
+              background-color: $sky-blue !important;
+            }
+          }
+          @include media-breakpoint-up(md) {
+
+            &:hover, &:focus, &:active {
+              background-color: $sky-blue !important;
+            }
+          }
+        }
+      }
+    }
+
+    &--secondary {
+      --bs-btn-padding-x: 1.1rem;
+      --bs-btn-padding-y: 1.1rem;
+      border: 0.1rem solid transparent !important;
+      background-color: $stone-600 !important;
+
+      &:hover, &:focus, &:active {
+        border: 0.1rem solid transparent !important;
+        background-color: $stone-600 !important;
+      }
+    }
+
+    &--outline {
+      --bs-btn-padding-x: 1.1rem;
+      --bs-btn-padding-y: 1.1rem;
+      border: 0.1rem solid $stone-900 !important;
+      background-color: transparent !important;
+      min-width: 4rem;
+      min-height: 4rem;
+
+      &:hover, &:focus, &:active {
+        border: 0.1rem solid $stone-900 !important;
+        background-color: transparent !important;
+      }
+
+      &-stone-500 {
+        border: 0.1rem solid $stone-500 !important;
+        background-color: transparent !important;
+
+        &:hover, &:focus, &:active {
+          border: 0.1rem solid $stone-500 !important;
+          background-color: transparent !important;
+        }
+      }
+    }
+
+    &--rotate {
+      @include media-breakpoint-up(md) {
+        svg {
+          transition: transform 0.3s ease-in-out !important;
+        }
+
+        &:hover, &:focus, &:active {
+          svg {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    &--scale {
+      @include media-breakpoint-up(md) {
+        svg {
+          transition: transform 0.3s ease-in-out !important;
+        }
+
+        &:hover, &:focus, &:active {
+          svg {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    &--primary {
+      border: 0.1rem solid transparent;
+      background-color: $primary;
+    }
+  }
+
+  &--no-hover {
+    pointer-events: none;
+  }
+
+  &-cart {
+    position: relative;
+
+    // &:hover {
+    //   border-color: transparent;
+    // }
+
+    .pill-badge {
+      position: absolute;
+      right: -0.6rem;
+      top: -0.4rem;
+    }
+  }
+
+  &:disabled {
+    &.btn {
+      &-primary {
+        --bs-btn-disabled-bg: #FF961C;
+      }
+      &-secondary {
+        --bs-btn-disabled-bg: #212121;
+      }
+      &-blue {
+        --bs-btn-disabled-bg: #6BC6EC;
+      }
+    }
+  }
+}

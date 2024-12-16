@@ -1,0 +1,19 @@
+.#{$global} {
+  &-pagination {
+    &-wrapper {
+      .pagination__item {
+        &::after {
+          display: none;
+        }
+
+        &:hover {
+          color: $secondary !important;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
